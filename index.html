@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        /*
+            spread operator - exercise
+        */
+
+        function createComputer(cpu, gpu, ram, disc) {
+            return {
+                cpu: cpu,
+                gpu: gpu,
+                ram: ram,
+                disc: disc
+            }
+        }
+
+        function createLaptop(obj) {
+            return {
+                ...obj,
+                type: "laptop",
+                weight: 2.5
+            }
+        }
+
+        let computer = createComputer("amd", "nvidia", "32gb", "1tb");
+        let laptop = createLaptop(computer);
+        console.log(laptop);
+    </script>
+</body>
+</html>
